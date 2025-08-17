@@ -64,10 +64,10 @@
     </section>
 
     <section class="my-4 mx-4 sm:mx-2 md:mx-4">
-      <h2 class="text-3xl font-bold text-center mb-6 flex items-center justify-center">
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 mr-4"></span>
+      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+        <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Categories
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 ml-4"></span>
+        <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
       </h2>
       <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-8 justify-items-center">
       <!-- Category 1 -->
@@ -118,10 +118,10 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-bold text-center mb-6 flex items-center justify-center">
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 mr-4"></span>
+      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+        <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Vacation-Inspired Beaded Collection
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 ml-4"></span>
+        <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
       </h2>
       <div class="relative">
       <!-- Prev Button -->
@@ -210,18 +210,18 @@
         </div>
         <div class="flex w-full">
           <button
-          class="flex items-center justify-center bg-orange text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-700 transition text-sm font-semibold"
+          class="flex items-center justify-center bg-gray-800 text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-900 transition text-sm font-semibold"
           @click.prevent="$router.push(`/product/${product.id}`)"
           >
           View Details
           </button>
           <button
-          class="flex items-center justify-center border border-orange text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
+          class="flex items-center justify-center border border-gray-800 text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
           @click.prevent="toggleCartIcon(product)"
           aria-label="Add to Cart"
           >
           <img
-            :src="cartIconState[product.id] ? '/assets/icons/cart-orange.svg' : '/assets/icons/cart.svg'"
+            :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
             :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
             class="w-5 h-5"
           />
@@ -303,10 +303,10 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-bold text-center mb-6 flex items-center justify-center">
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 mr-4"></span>
+      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+        <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         New Arrivals
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 ml-4"></span>
+        <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
       </h2>
       <div class="relative">
       <!-- Prev Button -->
@@ -395,18 +395,18 @@
         </div>
         <div class="flex w-full">
           <button
-          class="flex items-center justify-center bg-orange text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-700 transition text-sm font-semibold"
+          class="flex items-center justify-center bg-gray-800 text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-900 transition text-sm font-semibold"
           @click.prevent="$router.push(`/product/${product.id}`)"
           >
           View Details
           </button>
           <button
-          class="flex items-center justify-center border border-orange text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
+          class="flex items-center justify-center border border-gray-800 text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
           @click.prevent="toggleCartIcon(product)"
           aria-label="Add to Cart"
           >
           <img
-            :src="cartIconState[product.id] ? '/assets/icons/cart-orange.svg' : '/assets/icons/cart.svg'"
+            :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
             :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
             class="w-5 h-5"
           />
@@ -425,10 +425,10 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-bold text-center mb-6 flex items-center justify-center">
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 mr-4"></span>
+      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+        <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Anti-Tarnish Finds
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 ml-4"></span>
+        <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
       </h2>
       <div class="relative">
       <!-- Prev Button -->
@@ -517,18 +517,18 @@
         </div>
         <div class="flex w-full">
           <button
-          class="flex items-center justify-center bg-orange text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-700 transition text-sm font-semibold"
+          class="flex items-center justify-center bg-gray-800 text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-900 transition text-sm font-semibold"
           @click.prevent="$router.push(`/product/${product.id}`)"
           >
           View Details
           </button>
           <button
-          class="flex items-center justify-center border border-orange text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
+          class="flex items-center justify-center border border-gray-800 text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
           @click.prevent="toggleCartIcon(product)"
           aria-label="Add to Cart"
           >
           <img
-            :src="cartIconState[product.id] ? '/assets/icons/cart-orange.svg' : '/assets/icons/cart.svg'"
+            :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
             :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
             class="w-5 h-5"
           />
@@ -547,10 +547,10 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-bold text-center mb-6 flex items-center justify-center">
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 mr-4"></span>
+      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+        <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Fabric Jewellery & Wallets
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 ml-4"></span>
+        <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
       </h2>
       <div class="relative">
       <!-- Prev Button -->
@@ -639,18 +639,18 @@
         </div>
         <div class="flex w-full">
           <button
-          class="flex items-center justify-center bg-orange text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-700 transition text-sm font-semibold"
+          class="flex items-center justify-center bg-gray-800 text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-900 transition text-sm font-semibold"
           @click.prevent="$router.push(`/product/${product.id}`)"
           >
           View Details
           </button>
           <button
-          class="flex items-center justify-center border border-orange text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
+          class="flex items-center justify-center border border-gray-800 text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
           @click.prevent="toggleCartIcon(product)"
           aria-label="Add to Cart"
           >
           <img
-            :src="cartIconState[product.id] ? '/assets/icons/cart-orange.svg' : '/assets/icons/cart.svg'"
+            :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
             :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
             class="w-5 h-5"
           />
@@ -669,10 +669,10 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-bold text-center mb-6 flex items-center justify-center">
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 mr-4"></span>
+      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+        <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Best Sellers
-        <span class="inline-block align-middle w-16 h-0.5 bg-gray-300 ml-4"></span>
+        <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
       </h2>
       <div class="relative">
       <!-- Prev Button -->
@@ -761,18 +761,18 @@
         </div>
         <div class="flex w-full">
           <button
-          class="flex items-center justify-center bg-orange text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-700 transition text-sm font-semibold"
+          class="flex items-center justify-center bg-gray-800 text-white rounded-l-md py-2 px-3 w-4/5 hover:bg-gray-900 transition text-sm font-semibold"
           @click.prevent="$router.push(`/product/${product.id}`)"
           >
           View Details
           </button>
           <button
-          class="flex items-center justify-center border border-orange text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
+          class="flex items-center justify-center border border-gray-800 text-orange bg-white rounded-r-md py-2 px-0 w-1/5 hover-bg-beige hover:text-white transition"
           @click.prevent="toggleCartIcon(product)"
           aria-label="Add to Cart"
           >
           <img
-            :src="cartIconState[product.id] ? '/assets/icons/cart-orange.svg' : '/assets/icons/cart.svg'"
+            :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
             :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
             class="w-5 h-5"
           />
