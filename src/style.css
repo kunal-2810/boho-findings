@@ -33,7 +33,6 @@ body {
 /* Font Style classes */
 .font-primary {
   font-family: var(--font-primary);
-  color: var(--color-text-primary);
 }
 
 .font-tertiary {
