@@ -64,7 +64,7 @@
     </section>
 
     <section class="my-4 mx-4 sm:mx-2 md:mx-4">
-      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+      <h2 class="text-2xl font-medium text-center mb-6 flex items-center justify-center">
         <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Categories
         <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
@@ -73,42 +73,42 @@
       <!-- Category 1 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Earrings" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Paintings</span>
+        <span class="text-base font-medium">Paintings</span>
       </a>
       <!-- Category 2 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Necklaces" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Sculptures</span>
+        <span class="text-base font-medium">Sculptures</span>
       </a>
       <!-- Category 3 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Bracelets" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Jewelry</span>
+        <span class="text-base font-medium">Jewelry</span>
       </a>
       <!-- Category 4 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Rings" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Pottery</span>
+        <span class="text-base font-medium">Pottery</span>
       </a>
       <!-- Category 5 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Bags" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Textiles</span>
+        <span class="text-base font-medium">Textiles</span>
       </a>
       <!-- Category 6 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Scarves" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Home Decor</span>
+        <span class="text-base font-medium">Home Decor</span>
       </a>
       <!-- Category 7 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Watches" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Stationery</span>
+        <span class="text-base font-medium">Stationery</span>
       </a>
       <!-- Category 8 -->
       <a href="#" class="flex flex-col items-center">
         <img src="https://placehold.co/250" alt="Shoes" class="w-64 h-64 object-cover mb-2 rounded">
-        <span class="text-lg font-bold">Accessories</span>
+        <span class="text-base font-medium">Accessories</span>
       </a>
       </div>
     </section>
@@ -118,7 +118,7 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+      <h2 class="text-2xl font-medium text-center mb-6 flex items-center justify-center">
         <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Vacation-Inspired Beaded Collection
         <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
@@ -178,7 +178,7 @@
       v-for="product in visibleProducts"
       :key="product.id"
       :href="`/product/${product.id}`"
-      class="flex-shrink-0 w-[calc(100%/2-0.5rem)] xs:w-[calc(100%/2-0.5rem)] sm:w-[calc(100%/3-0.5rem)] md:w-[calc(100%/5-0.5rem)] max-w-xs mx-2 bg-white rounded-lg shadow hover:shadow-lg transition group"
+      class="flex-shrink-0 w-[calc(100%/2-0.5rem)] xs:w-[calc(100%/2-0.5rem)] sm:w-[calc(100%/3-0.5rem)] md:w-[calc(100%/5-0.5rem)] max-w-xs mx-2 bg-white rounded-lg shadow-md hover:shadow-lg transition group"
       >
       <div class="relative">
         <!-- Wishlist Button -->
@@ -200,7 +200,7 @@
         class="w-full h-48 object-cover rounded-t-lg"
         />
         <div class="p-3 flex flex-col">
-        <span class="font-semibold text-lg mb-1 truncate">{{ product.name }}</span>
+        <span class="font-medium text-base mb-1 truncate">{{ product.name }}</span>
         <span class="text-sm text-gray-500 mb-2 truncate">{{ product.category }}</span>
         <div class="flex items-center mb-3">
           <span class="font-primary text-sm text-gray-400 line-through mr-2" v-if="product.salesPrice">
@@ -303,7 +303,7 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+      <h2 class="text-2xl font-medium text-center mb-6 flex items-center justify-center">
         <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         New Arrivals
         <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
@@ -385,7 +385,7 @@
         class="w-full h-48 object-cover rounded-t-lg"
         />
         <div class="p-3 flex flex-col">
-        <span class="font-semibold text-lg mb-1 truncate">{{ product.name }}</span>
+        <span class="font-medium text-base mb-1 truncate">{{ product.name }}</span>
         <span class="text-sm text-gray-500 mb-2 truncate">{{ product.category }}</span>
         <div class="flex items-center mb-3">
           <span class="font-primary text-sm text-gray-400 line-through mr-2" v-if="product.salesPrice">
@@ -425,7 +425,7 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+      <h2 class="text-2xl font-medium text-center mb-6 flex items-center justify-center">
         <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Anti-Tarnish Finds
         <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
@@ -507,7 +507,7 @@
         class="w-full h-48 object-cover rounded-t-lg"
         />
         <div class="p-3 flex flex-col">
-        <span class="font-semibold text-lg mb-1 truncate">{{ product.name }}</span>
+        <span class="font-medium text-base mb-1 truncate">{{ product.name }}</span>
         <span class="text-sm text-gray-500 mb-2 truncate">{{ product.category }}</span>
         <div class="flex items-center mb-3">
           <span class="font-primary text-sm text-gray-400 line-through mr-2" v-if="product.salesPrice">
@@ -547,7 +547,7 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+      <h2 class="text-2xl font-medium text-center mb-6 flex items-center justify-center">
         <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Fabric Jewellery & Wallets
         <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
@@ -629,7 +629,7 @@
         class="w-full h-48 object-cover rounded-t-lg"
         />
         <div class="p-3 flex flex-col">
-        <span class="font-semibold text-lg mb-1 truncate">{{ product.name }}</span>
+        <span class="font-medium text-base mb-1 truncate">{{ product.name }}</span>
         <span class="text-sm text-gray-500 mb-2 truncate">{{ product.category }}</span>
         <div class="flex items-center mb-3">
           <span class="font-primary text-sm text-gray-400 line-through mr-2" v-if="product.salesPrice">
@@ -669,7 +669,7 @@
       @mouseenter="showProductNav = true"
       @mouseleave="showProductNav = false"
     >
-      <h2 class="text-3xl font-medium text-center mb-6 flex items-center justify-center">
+      <h2 class="text-2xl font-medium text-center mb-6 flex items-center justify-center">
         <span class="inline-block align-middle w-16 h-0.5 bg-orange mr-4"></span>
         Best Sellers
         <span class="inline-block align-middle w-16 h-0.5 bg-green ml-4"></span>
@@ -751,7 +751,7 @@
         class="w-full h-48 object-cover rounded-t-lg"
         />
         <div class="p-3 flex flex-col">
-        <span class="font-semibold text-lg mb-1 truncate">{{ product.name }}</span>
+        <span class="font-medium text-base mb-1 truncate">{{ product.name }}</span>
         <span class="text-sm text-gray-500 mb-2 truncate">{{ product.category }}</span>
         <div class="flex items-center mb-3">
           <span class="font-primary text-sm text-gray-400 line-through mr-2" v-if="product.salesPrice">
@@ -786,6 +786,72 @@
       </div>
     </section>
     
+    <section class="relative px-4 pt-4 pb-10 sm:px-4 sm:pt-4 sm:pb-10">
+      <div
+        class="rounded-lg overflow-hidden shadow w-full relative"
+        @mouseenter="showNav = true"
+        @mouseleave="showNav = false"
+      >
+        <!-- Desktop & Tablet Banner Carousel -->
+        <a href="#" class="hidden sm:block" aria-label="Banner Link">
+          <img
+            :src="desktopBanners[currentBanner]"
+            :alt="`Banner ${currentBanner + 1}`"
+            class="w-full object-cover h-[400px] sm:h-[500px] md:h-[600px]"
+          />
+        </a>
+        <!-- Mobile Banner Carousel -->
+        <a href="#" class="block sm:hidden" aria-label="Banner Link">
+          <img
+            :src="mobileBanners[currentBanner]"
+            :alt="`Mobile Banner ${currentBanner + 1}`"
+            class="w-full object-cover h-[180px] xs:h-[220px] sm:h-[250px]"
+          />
+        </a>
+        <!-- Prev/Next Buttons (Desktop) -->
+        <button
+          v-if="showNav"
+          @click="prevBanner"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition hidden sm:flex"
+        >
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button
+          v-if="showNav"
+          @click="nextBanner"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition hidden sm:flex"
+        >
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <!-- Prev/Next Buttons (Mobile) -->
+        <button
+          v-if="showNav"
+          @click="prevBanner"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition sm:hidden flex"
+        >
+          <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button
+          v-if="showNav"
+          @click="nextBanner"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition sm:hidden flex"
+        >
+          <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+
+
+
   </Layout>
 </template>
 
