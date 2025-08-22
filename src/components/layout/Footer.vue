@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-gray-700 text-white">
-    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Panel 1 -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Quick Links</h3>

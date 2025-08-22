@@ -29,7 +29,7 @@
                     >
                         <ul>
                             <li v-for="cat in categories" :key="cat.id">
-                                <a :href="cat.link" class="block px-4 py-2 font-base hover-bg-beige">{{ cat.name }}</a>
+                                <a :href="cat.link" class="block px-4 py-2 font-sm hover-bg-beige">{{ cat.name }}</a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
                                 >
                                     <ul>
                                         <li v-for="sub in col.subCategories" :key="sub.id">
-                                            <a :href="sub.link" class="block px-4 py-2 font-base hover-bg-beige">{{ sub.name }}</a>
+                                            <a :href="sub.link" class="block px-4 py-2 font-sm hover-bg-beige">{{ sub.name }}</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -95,7 +95,7 @@
                     >
                         <ul>
                             <li v-for="item in other" :key="item.id">
-                                <a :href="item.link" class="block px-4 py-2 font-base hover-bg-beige">{{ item.name }}</a>
+                                <a :href="item.link" class="block px-4 py-2 font-sm hover-bg-beige">{{ item.name }}</a>
                             </li>
                         </ul>
                     </div>
