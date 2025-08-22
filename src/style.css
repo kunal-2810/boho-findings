@@ -82,6 +82,19 @@ body {
   background-color: var(--color-beige);
 }
 
+/* Hover Text Color classes */
+.hover-text-orange:hover {
+  color: var(--color-orange);
+}
+
+.hover-text-green:hover {
+  color: var(--color-green);
+}
+
+.hover-text-beige:hover {
+  color: var(--color-beige);
+}
+
 
 /* Border Color classes */
 .border-orange {

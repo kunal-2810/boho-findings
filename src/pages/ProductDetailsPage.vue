@@ -32,13 +32,13 @@
               class="w-full h-full object-cover rounded"
             />
             <!-- Wishlist Icon (top right, overlay) -->
-            <button class="absolute top-4 right-4 z-20 bg-white/80 rounded-full p-1 shadow" @click="toggleWishlist">
+            <!-- <button class="absolute top-4 right-4 z-20 bg-white/80 rounded-full p-1 shadow" @click="toggleWishlist">
               <img
                 :src="isWishlisted ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
                 :alt="isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'"
                 class="w-6 h-6"
               />
-            </button>
+            </button> -->
             <!-- Prev Button (overlay) -->
             <button
               class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full shadow p-2 disabled:opacity-50"
@@ -81,7 +81,7 @@
       <!-- Right Panel: Product Info -->
       <div class="w-full lg:w-1/2 flex flex-col gap-4">
         <!-- Product Name -->
-        <h1 class="text-2xl font-bold mb-2">Boho Chic Necklace</h1>
+        <h1 class="text-2xl font-medium mb-2">Boho Chic Necklace</h1>
         <!-- Star Ratings and Review Count -->
         <div class="flex items-center gap-2 mb-2">
           <div class="flex items-center">
@@ -221,7 +221,7 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
@@ -231,7 +231,7 @@
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"

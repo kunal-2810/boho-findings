@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-2">
-    <div class="flex justify-between text-xs text-gray-600 mb-1">
+    <div class="flex justify-between font-primary text-xs text-gray-600 mb-1">
       <span>₹{{ min }}</span>
       <span>₹{{ max }}</span>
     </div>
@@ -18,7 +18,7 @@
       :range="true"
       :color="'#f97316'"
     />
-    <div class="font-bold text-lg text-black mt-4">
+    <div class="font-medium font-primary text-gray-800 mt-4">
       ₹{{ internalValue[0].toLocaleString() }} - ₹{{ internalValue[1].toLocaleString() }}
     </div>
   </div>

@@ -5,41 +5,41 @@
       <div>
         <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:underline">Earrings</a></li>
-          <li><a href="#" class="hover:underline">Necklaces</a></li>
-          <li><a href="#" class="hover:underline">Hair Accessories</a></li>
-          <li><a href="#" class="hover:underline">Fabric Jewellery</a></li>
-          <li><a href="#" class="hover:underline">Seasonal Picks</a></li>
+          <li><a href="#" class="hover-text-beige">Earrings</a></li>
+          <li><a href="#" class="hover-text-beige">Necklaces</a></li>
+          <li><a href="#" class="hover-text-beige">Hair Accessories</a></li>
+          <li><a href="#" class="hover-text-beige">Fabric Jewellery</a></li>
+          <li><a href="#" class="hover-text-beige">Seasonal Picks</a></li>
         </ul>
       </div>
       <!-- Panel 2 -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Company</h3>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:underline">Home</a></li>
-          <li><a href="#" class="hover:underline">About</a></li>
-          <li><a href="#" class="hover:underline">Blogs</a></li>
-          <li><a href="#" class="hover:underline">Contact</a></li>
+          <li><a href="#" class="hover-text-beige">Home</a></li>
+          <li><a href="#" class="hover-text-beige">About</a></li>
+          <li><a href="#" class="hover-text-beige">Blogs</a></li>
+          <li><a href="#" class="hover-text-beige">Contact</a></li>
         </ul>
       </div>
       <!-- Panel 3 -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Policies</h3>
         <ul class="space-y-2">
-          <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
-          <li><a href="#" class="hover:underline">Privacy</a></li>
-          <li><a href="#" class="hover:underline">Cancellation And Refund</a></li>
-          <li><a href="#" class="hover:underline">Shipping</a></li>
+          <li><a href="#" class="hover-text-beige">Terms & Conditions</a></li>
+          <li><a href="#" class="hover-text-beige">Privacy</a></li>
+          <li><a href="#" class="hover-text-beige">Cancellation And Refund</a></li>
+          <li><a href="#" class="hover-text-beige">Shipping</a></li>
         </ul>
       </div>
       <!-- Panel 4 -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-        <div class="flex items-center mb-2">
+        <div class="flex items-center mb-2 hover-text-beige">
           <img src="/assets/icons/phone.svg" alt="Call" class="w-5 h-5 mr-2" />
           <span>+1 234 567 890</span>
         </div>
-        <div class="flex items-center mb-2">
+        <div class="flex items-center mb-2 hover-text-beige">
           <img src="/assets/icons/mail.svg" alt="Mail" class="w-5 h-5 mr-2" />
           <span>info@example.com</span>
         </div>

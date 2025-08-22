@@ -55,7 +55,7 @@
           >
             <div class="relative">
               <!-- Wishlist Button -->
-              <button
+              <!-- <button
                 class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
                 @click.prevent.stop="toggleWishlist(product)"
                 aria-label="Add to Wishlist"
@@ -65,7 +65,7 @@
                   :alt="product.wishlisted ? 'Added to Wishlist' : 'Add to Wishlist'"
                   class="w-5 h-5"
                 />
-              </button>
+              </button> -->
               <!-- Product Image -->
               <img
                 :src="product.image"
@@ -191,7 +191,7 @@
               >
                 <div class="relative">
                   <!-- Wishlist Button -->
-                  <button
+                  <!-- <button
                     class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
                     @click.prevent.stop="toggleWishlist(product)"
                     aria-label="Add to Wishlist"
@@ -201,7 +201,7 @@
                       :alt="product.wishlisted ? 'Added to Wishlist' : 'Add to Wishlist'"
                       class="w-5 h-5"
                     />
-                  </button>
+                  </button> -->
                   <!-- Product Image -->
                   <img
                     :src="product.image"

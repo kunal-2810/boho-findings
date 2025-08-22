@@ -112,7 +112,7 @@
                     <img src="/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
                 </a>
                 <!-- Cart -->
-                <a href="/my-cart" class="relative flex items-center">
+                <a href="/cart" class="relative flex items-center">
                     <img src="/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
                     <span
                         v-if="cartCount > 0"
@@ -187,7 +187,7 @@
                     <img src="/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
                 </a>
                 <div class="relative flex items-center">
-                    <a href="/my-cart">
+                    <a href="/cart">
                         <img src="/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
                     </a>
                     <span v-if="cartCount > 0" class="absolute top-0 right-0 -mt-2 -mr-2 bg-orange text-white text-xs rounded-full w-5 h-5 flex items-center justify-center z-10" style="min-width: 1.25rem; text-align: center;">
