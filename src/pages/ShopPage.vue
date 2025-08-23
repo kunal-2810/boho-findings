@@ -562,9 +562,7 @@ function sortProducts(list: any[]) {
 const visibleProducts = computed(() => sortProducts(filteredProducts.value));
 
 // Wishlist toggle
-function toggleWishlist(product: any) {
-  product.wishlisted = !product.wishlisted;
-}
+
 
 // Add to cart toggle logic
 function addToCart(product: any) {

@@ -376,10 +376,8 @@ import { nextTick } from 'vue';
 
 
 // Wishlist state
-const isWishlisted = ref(false);
-function toggleWishlist() {
-  isWishlisted.value = !isWishlisted.value;
-}
+
+
 
 // Image gallery state
 const images = ref([
@@ -486,7 +484,7 @@ const products = ref([
 
 const showProductNav = ref(false);
 const productSliderIndex = ref(0);
-const productSliderRef = ref<HTMLElement | null>(null);
+
 
 const productsPerView = ref(5);
 
@@ -526,16 +524,13 @@ function nextProduct() {
   }
 }
 
-function addToCart(product: any) {
-  // Implement your add to cart logic here
-  alert(`Added ${product.name} to cart!`);
-}
+
 
 // State to track cart icon for each product
 const cartIconState = ref<{ [key: number]: boolean }>({});
 
 // State to track wishlist icon for each product
-const wishlistIconState = ref<{ [key: number]: boolean }>({});
+
 
 // Toggle cart icon state for a product
 function toggleCartIcon(product: any) {
@@ -543,9 +538,7 @@ function toggleCartIcon(product: any) {
 }
 
 // Toggle wishlist icon state for a product
-function toggleWishlistIcon(product: any) {
-  wishlistIconState.value[product.id] = !wishlistIconState.value[product.id];
-}
+
 
 // Reviews & Ratings Section State
 const showReviewForm = ref(false);

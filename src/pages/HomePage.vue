@@ -1156,7 +1156,7 @@ const products = ref([
 
 const showProductNav = ref(false);
 const productSliderIndex = ref(0);
-const productSliderRef = ref<HTMLElement | null>(null);
+
 
 const productsPerView = ref(5);
 
@@ -1196,10 +1196,7 @@ function nextProduct() {
   }
 }
 
-function addToCart(product: any) {
-  // Implement your add to cart logic here
-  alert(`Added ${product.name} to cart!`);
-}
+
 
 // State to track cart icon for each product
 const cartIconState = ref<{ [key: number]: boolean }>({});

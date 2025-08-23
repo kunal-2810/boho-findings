@@ -115,7 +115,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+
 import Layout from '../components/layout/Layout.vue';
 
 

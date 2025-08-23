@@ -108,11 +108,11 @@
                     <img src="/assets/icons/search.svg" alt="Search" class="w-6 h-6" />
                 </button>
                 <!-- Profile -->
-                <a href="/my-account">
+                <a :href="`${BASE_PATH}/my-account`">
                     <img src="/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
                 </a>
                 <!-- Cart -->
-                <a href="/cart" class="relative flex items-center">
+                <a :href="`${BASE_PATH}/cart`" class="relative flex items-center">
                     <img src="/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
                     <span
                         v-if="cartCount > 0"
@@ -283,6 +283,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
+import { BASE_PATH } from '../../utilities/constant'
 
 const isFixed = ref(false)
 let lastScroll = 0
