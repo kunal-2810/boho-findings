@@ -40,16 +40,6 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('./pages/OrderDetailsPage.vue'),
 		props: true,
 	},
-	{
-		path: '/change-password',
-		name: 'ChangePassword',
-		component: () => import('./pages/ChangePasswordPage.vue'),
-	},
-	{
-		path: '/my-addresses',
-		name: 'Addresses',
-		component: () => import('./pages/AddressesPage.vue'),
-	},
 ];
 
 const router = createRouter({
