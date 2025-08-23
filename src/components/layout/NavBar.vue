@@ -5,11 +5,13 @@
             <div class="hidden lg:flex items-center justify-between px-4 py-2">
             <!-- Logo -->
             <div class="flex-shrink-0">
-                <img src="/assets/images/logo.webp" alt="Logo" class="hidden lg:block lg:w-[220px] lg:h-[90px]" />
+                <router-link to="/">
+                    <img src="@/assets/images/logo.webp" alt="Logo" class="hidden lg:block lg:w-[220px] lg:h-[90px]" />
+                </router-link>
             </div>
             <!-- Menu -->
             <ul class="flex space-x-8 font-base text-gray-700">
-                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li><router-link to="/" class="hover:text-primary">Home</router-link></li>
                 <li class="relative" ref="categoryMenu">
                     <button
                         class="flex items-center hover:text-primary focus:outline-none"
@@ -105,15 +107,15 @@
             <div class="flex items-center space-x-6">
                 <!-- Search -->
                 <button @click="openSearchBar" class="focus:outline-none" aria-label="Open search">
-                    <img src="/assets/icons/search.svg" alt="Search" class="w-6 h-6" />
+                    <img src="@/assets/icons/search.svg" alt="Search" class="w-6 h-6" />
                 </button>
                 <!-- Profile -->
                 <a :href="`${BASE_PATH}/my-account`">
-                    <img src="/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
+                    <img src="@/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
                 </a>
                 <!-- Cart -->
                 <a :href="`${BASE_PATH}/cart`" class="relative flex items-center">
-                    <img src="/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
+                    <img src="@/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
                     <span
                         v-if="cartCount > 0"
                         class="absolute top-0 right-0 -mt-2 -mr-2 bg-orange text-white text-xs rounded-full w-5 h-5 flex items-center justify-center z-10"
@@ -128,7 +130,7 @@
             <div :class="searchBarClass" v-if="showSearch">
                 <div class="max-w-2xl mx-auto">
                     <div class="flex items-center border rounded px-3 py-2 bg-white">
-                        <img src="/assets/icons/search.svg" alt="Search" class="w-5 h-5 mr-2" />
+                        <img src="@/assets/icons/search.svg" alt="Search" class="w-5 h-5 mr-2" />
                         <input
                             v-model="searchQuery"
                             @input="onSearch"
@@ -138,7 +140,7 @@
                             ref="searchInput"
                         />
                         <button @click="closeSearchBar" class="ml-2" aria-label="Close search">
-                            <img src="/assets/icons/close.svg" alt="Close" class="w-5 h-5" />
+                            <img src="@/assets/icons/close.svg" alt="Close" class="w-5 h-5" />
                         </button>
                     </div>
                     <div v-if="searchQuery && (searchResults.products.length || searchResults.categories.length)" class="mt-4 bg-white border rounded shadow divide-y divide-gray-200">
@@ -177,18 +179,18 @@
         <!-- Mobile/Tablet Navbar -->
         <div class="flex lg:hidden items-center justify-between px-4 py-2">
             <!-- Logo -->
-            <img src="/assets/images/logo.webp" alt="Logo" class="w-[180px] h-[72px]" />
+            <img src="@/assets/images/logo.webp" alt="Logo" class="w-[180px] h-[72px]" />
             <!-- Right Icons -->
             <div class="flex items-center space-x-4">
                 <button @click="openSearchBar" class="focus:outline-none" aria-label="Open search">
-                    <img src="/assets/icons/search.svg" alt="Search" class="w-6 h-6" />
+                    <img src="@/assets/icons/search.svg" alt="Search" class="w-6 h-6" />
                 </button>
                 <a href="/my-account">
-                    <img src="/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
+                    <img src="@/assets/icons/user.svg" alt="Profile" class="w-6 h-6" />
                 </a>
                 <div class="relative flex items-center">
                     <a href="/cart">
-                        <img src="/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
+                        <img src="@/assets/icons/cart.svg" alt="Cart" class="w-6 h-6" />
                     </a>
                     <span v-if="cartCount > 0" class="absolute top-0 right-0 -mt-2 -mr-2 bg-orange text-white text-xs rounded-full w-5 h-5 flex items-center justify-center z-10" style="min-width: 1.25rem; text-align: center;">
                         {{ cartCount }}
@@ -214,7 +216,7 @@
                 <div class="flex items-center justify-between px-6 py-4 border-b flex-shrink-0">
                 <span class="font-bold text-lg">Menu</span>
                 <button @click="drawerOpen = false" class="focus:outline-none">
-                    <img src="/assets/icons/close.svg" alt="Close" class="w-4 h-4" />
+                    <img src="@/assets/icons/close.svg" alt="Close" class="w-4 h-4" />
                 </button>
                 </div>
                 <!-- Make this div scrollable -->
@@ -267,10 +269,10 @@
                 <!-- Social Icons -->
                 <div class="flex space-x-4 px-6 mt-8 mb-6">
                     <a href="https://facebook.com" target="_blank" rel="noopener">
-                    <img src="/assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6" />
+                    <img src="@/assets/icons/facebook.svg" alt="Facebook" class="w-6 h-6" />
                     </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener">
-                    <img src="/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
+                    <img src="@/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
                     </a>
                 </div>
                 </div>
@@ -323,26 +325,26 @@ const searchQuery = ref('')
 const cartCount = ref(2)
 
 const categories = [
-    { id: 1, name: 'Earrings', link: '#' },
-    { id: 2, name: 'Necklaces', link: '#' },
-    { id: 3, name: 'Hair Accessories', link: '#' },
-    { id: 4, name: 'Fabric Jewellery', link: '#' },
-    { id: 5, name: 'Fabric Wallets', link: '#' },
-    { id: 6, name: 'Pinterest Fashion', link: '#' },
+    { id: 1, name: 'Earrings', link: BASE_PATH + '/shop' },
+    { id: 2, name: 'Necklaces', link: BASE_PATH + '/shop' },
+    { id: 3, name: 'Hair Accessories', link: BASE_PATH + '/shop' },
+    { id: 4, name: 'Fabric Jewellery', link: BASE_PATH + '/shop' },
+    { id: 5, name: 'Fabric Wallets', link: BASE_PATH + '/shop' },
+    { id: 6, name: 'Pinterest Fashion', link: BASE_PATH + '/shop' },
 ]
 
 const collections = [
-    { id: 1, name: 'Vacation', link: '#' },
-    { id: 2, name: 'Pinterest Hair', link: '#' },
-    { id: 3, name: 'Anti‑Tarnish', link: '#' },
-    { id: 4, name: 'Fabric Designs', link: '#' },
-    { id: 5, name: 'Seasonal Picks', link: '#' }
+    { id: 1, name: 'Vacation', link: BASE_PATH + '/shop' },
+    { id: 2, name: 'Pinterest Hair', link: BASE_PATH + '/shop' },
+    { id: 3, name: 'Anti‑Tarnish', link: BASE_PATH + '/shop' },
+    { id: 4, name: 'Fabric Designs', link: BASE_PATH + '/shop' },
+    { id: 5, name: 'Seasonal Picks', link: BASE_PATH + '/shop' }
 ]
 
 const other = [
-    { id: 1, name: 'About', link: '#' },
-    { id: 2, name: 'Return & Refund', link: '#' },
-    { id: 3, name: 'Contact', link: '#' },
+    { id: 1, name: 'About', link: BASE_PATH + '#' },
+    { id: 2, name: 'Return & Refund', link: BASE_PATH + '#' },
+    { id: 3, name: 'Contact', link: BASE_PATH + '#' },
 ]
 
 const searchResults = ref({
@@ -378,14 +380,14 @@ function onSearch() {
             {
                 id: 1,
                 name: 'Myra Handmade Beaded Earrings',
-                image: '/assets/images/products/product-1.jpg',
+                image: '@/assets/images/products/product-1.jpg',
                 price: '₹799',
                 salePrice: '₹999',
             },
             {
                 id: 2,
                 name: 'Boho Chic Necklace',
-                image: '/assets/images/products/product-2.jpg',
+                image: '@/assets/images/products/product-2.jpg',
                 price: '₹1199',
                 salePrice: '',
             },

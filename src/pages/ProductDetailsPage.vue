@@ -34,7 +34,7 @@
             <!-- Wishlist Icon (top right, overlay) -->
             <!-- <button class="absolute top-4 right-4 z-20 bg-white/80 rounded-full p-1 shadow" @click="toggleWishlist">
               <img
-                :src="isWishlisted ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+                :src="isWishlisted ? new URL('@/assets/icons/wishlist.svg', import.meta.url).href : new URL('@/assets/icons/wishlist-border.svg', import.meta.url).href"
                 :alt="isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'"
                 class="w-6 h-6"
               />
@@ -227,7 +227,7 @@
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? new URL('@/assets/icons/wishlist.svg', import.meta.url).href : new URL('@/assets/icons/wishlist-border.svg', import.meta.url).href"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
@@ -261,7 +261,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -381,12 +381,12 @@ import { nextTick } from 'vue';
 
 // Image gallery state
 const images = ref([
-  '/assets/images/products/product-1.jpg',
-  '/assets/images/products/product-2.jpg',
-  '/assets/images/products/product-3.jpg',
-  '/assets/images/products/product-4.jpg',
-  '/assets/images/products/product-5.jpg',
-  '/assets/images/products/product-6.jpg',
+  new URL('@/assets/images/products/product-1.jpg', import.meta.url).href,
+  new URL('@/assets/images/products/product-2.jpg', import.meta.url).href,
+  new URL('@/assets/images/products/product-3.jpg', import.meta.url).href,
+  new URL('@/assets/images/products/product-4.jpg', import.meta.url).href,
+  new URL('@/assets/images/products/product-5.jpg', import.meta.url).href,
+  new URL('@/assets/images/products/product-6.jpg', import.meta.url).href,
 ]);
 const currentImageIndex = ref(0);
 function prevImage() {
@@ -412,7 +412,7 @@ const products = ref([
     id: 1,
     name: 'Hand-painted Vase',
     category: 'Pottery',
-    image: '/assets/images/products/product-1.jpg',
+  image: new URL('@/assets/images/products/product-1.jpg', import.meta.url).href,
     alt: 'Hand-painted Vase',
     salesPrice: 1200,
     price: 950,
@@ -421,7 +421,7 @@ const products = ref([
     id: 2,
     name: 'Abstract Canvas',
     category: 'Paintings',
-    image: '/assets/images/products/product-2.jpg',
+  image: new URL('@/assets/images/products/product-2.jpg', import.meta.url).href,
     alt: 'Abstract Canvas',
     salesPrice: 2000,
     price: 1700,
@@ -430,7 +430,7 @@ const products = ref([
     id: 3,
     name: 'Silver Necklace',
     category: 'Jewelry',
-    image: '/assets/images/products/product-3.jpg',
+  image: new URL('@/assets/images/products/product-3.jpg', import.meta.url).href,
     alt: 'Silver Necklace',
     salesPrice: 1500,
     price: 1200,
@@ -439,7 +439,7 @@ const products = ref([
     id: 4,
     name: 'Clay Sculpture',
     category: 'Sculptures',
-    image: '/assets/images/products/product-4.jpg',
+  image: new URL('@/assets/images/products/product-4.jpg', import.meta.url).href,
     alt: 'Clay Sculpture',
     salesPrice: 1800,
     price: 1450,
@@ -448,7 +448,7 @@ const products = ref([
     id: 5,
     name: 'Woven Textile',
     category: 'Textiles',
-    image: '/assets/images/products/product-5.jpg',
+  image: new URL('@/assets/images/products/product-5.jpg', import.meta.url).href,
     alt: 'Woven Textile',
     salesPrice: 900,
     price: 700,
@@ -457,7 +457,7 @@ const products = ref([
     id: 6,
     name: 'Decorative Plate',
     category: 'Home Decor',
-    image: '/assets/images/products/product-6.jpg',
+  image: new URL('@/assets/images/products/product-6.jpg', import.meta.url).href,
     alt: 'Decorative Plate',
     salesPrice: 1100,
     price: 850,
@@ -466,7 +466,7 @@ const products = ref([
     id: 7,
     name: 'Artistic Notebook',
     category: 'Stationery',
-    image: '/assets/images/products/product-7.jpg',
+  image: new URL('@/assets/images/products/product-7.jpg', import.meta.url).href,
     alt: 'Artistic Notebook',
     salesPrice: 500,
     price: 350,
@@ -533,26 +533,30 @@ const cartIconState = ref<{ [key: number]: boolean }>({});
 
 
 // Toggle cart icon state for a product
+import cartFilledIcon from '@/assets/icons/cart-filled.svg';
+import cartIcon from '@/assets/icons/cart.svg';
+
 function toggleCartIcon(product: any) {
   cartIconState.value[product.id] = !cartIconState.value[product.id];
 }
 
 // Toggle wishlist icon state for a product
-
+// import wishlistIcon from '@/assets/icons/wishlist.svg';
+// import wishlistBorderIcon from '@/assets/icons/wishlist-border.svg';
 
 // Reviews & Ratings Section State
 const showReviewForm = ref(false);
 const reviews = ref([
-  { id: 1, name: 'Amit Sharma', profileImage: '/assets/images/profile/profile-1.jpg', date: '2025-08-01', rating: 5, feedback: 'Beautiful product, great quality!' },
-  { id: 2, name: 'Priya Singh', profileImage: '/assets/images/profile/profile-2.jpg', date: '2025-07-28', rating: 4, feedback: 'Loved the design, will buy again.' },
-  { id: 3, name: 'Rahul Verma', profileImage: '/assets/images/profile/profile-3.jpg', date: '2025-07-20', rating: 5, feedback: 'Fast delivery and amazing packaging.' },
-  { id: 4, name: 'Sneha Patel', profileImage: '/assets/images/profile/profile-4.jpg', date: '2025-07-15', rating: 4, feedback: 'Looks even better in person.' },
-  { id: 5, name: 'Vikram Rao', profileImage: '/assets/images/profile/profile-5.jpg', date: '2025-07-10', rating: 5, feedback: 'Very comfortable to wear.' },
-  { id: 6, name: 'Ritu Jain', profileImage: '/assets/images/profile/profile-6.jpg', date: '2025-07-05', rating: 5, feedback: 'Perfect for gifting.' },
-  { id: 7, name: 'Manish Gupta', profileImage: '/assets/images/profile/profile-7.jpg', date: '2025-07-01', rating: 4, feedback: 'Good value for money.' },
-  { id: 8, name: 'Anjali Mehra', profileImage: '/assets/images/profile/profile-8.jpg', date: '2025-06-28', rating: 5, feedback: 'Absolutely stunning!' },
-  { id: 9, name: 'Deepak Kumar', profileImage: '/assets/images/profile/profile-9.jpg', date: '2025-06-20', rating: 4, feedback: 'Nice finish and shine.' },
-  { id: 10, name: 'Kavita Joshi', profileImage: '/assets/images/profile/profile-10.jpg', date: '2025-06-15', rating: 5, feedback: 'Highly recommended.' },
+  { id: 1, name: 'Amit Sharma', profileImage: new URL('@/assets/images/profile/profile-1.jpg', import.meta.url).href, date: '2025-08-01', rating: 5, feedback: 'Beautiful product, great quality!' },
+  { id: 2, name: 'Priya Singh', profileImage: new URL('@/assets/images/profile/profile-2.jpg', import.meta.url).href, date: '2025-07-28', rating: 4, feedback: 'Loved the design, will buy again.' },
+  { id: 3, name: 'Rahul Verma', profileImage: new URL('@/assets/images/profile/profile-3.jpg', import.meta.url).href, date: '2025-07-20', rating: 5, feedback: 'Fast delivery and amazing packaging.' },
+  { id: 4, name: 'Sneha Patel', profileImage: new URL('@/assets/images/profile/profile-4.jpg', import.meta.url).href, date: '2025-07-15', rating: 4, feedback: 'Looks even better in person.' },
+  { id: 5, name: 'Vikram Rao', profileImage: new URL('@/assets/images/profile/profile-5.jpg', import.meta.url).href, date: '2025-07-10', rating: 5, feedback: 'Very comfortable to wear.' },
+  { id: 6, name: 'Ritu Jain', profileImage: new URL('@/assets/images/profile/profile-6.jpg', import.meta.url).href, date: '2025-07-05', rating: 5, feedback: 'Perfect for gifting.' },
+  { id: 7, name: 'Manish Gupta', profileImage: new URL('@/assets/images/profile/profile-7.jpg', import.meta.url).href, date: '2025-07-01', rating: 4, feedback: 'Good value for money.' },
+  { id: 8, name: 'Anjali Mehra', profileImage: new URL('@/assets/images/profile/profile-8.jpg', import.meta.url).href, date: '2025-06-28', rating: 5, feedback: 'Absolutely stunning!' },
+  { id: 9, name: 'Deepak Kumar', profileImage: new URL('@/assets/images/profile/profile-9.jpg', import.meta.url).href, date: '2025-06-20', rating: 4, feedback: 'Nice finish and shine.' },
+  { id: 10, name: 'Kavita Joshi', profileImage: new URL('@/assets/images/profile/profile-10.jpg', import.meta.url).href, date: '2025-06-15', rating: 5, feedback: 'Highly recommended.' },
 ]);
 const reviewsToShow = ref(5);
 const visibleReviews = computed(() => reviews.value.slice(0, reviewsToShow.value));

@@ -55,13 +55,13 @@
               <!-- Price & Button for mobile/tablet -->
               <div class="flex md:hidden flex-col gap-2 mt-4">
                 <div class="font-primary text-lg font-medium text-gray-600">₹{{ order.price }}</div>
-                <button class="px-4 py-2 bg-orange text-white rounded hover:bg-orange-600 text-sm font-medium">Order Details</button>
+                <button class="px-4 py-2 bg-orange text-white rounded hover:bg-orange-600 text-sm font-medium" @click="goToOrderDetails(order)">Order Details</button>
               </div>
             </div>
             <!-- Right: Price & Button for desktop -->
             <div class="hidden md:flex flex-col items-end gap-2">
               <div class="font-primary text-lg font-medium text-gray-600">₹{{ order.price }}</div>
-              <button class="px-4 py-2 bg-orange text-white rounded hover:bg-orange-600 text-sm font-medium">Order Details</button>
+              <button class="px-4 py-2 bg-orange text-white rounded hover:bg-orange-600 text-sm font-medium" @click="goToOrderDetails(order)">Order Details</button>
             </div>
           </div>
           <!-- Separator -->
@@ -78,6 +78,12 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+function goToOrderDetails(order: any) {
+  router.push({ name: 'OrderDetails', params: { orderId: order.id } });
+}
 import { ref, computed } from 'vue';
 import Layout from '../components/layout/Layout.vue';
 

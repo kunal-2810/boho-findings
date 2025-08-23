@@ -205,6 +205,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Layout from '../components/layout/Layout.vue';
+import Product1 from '@/assets/images/products/product-1.jpg';
+import Product2 from '@/assets/images/products/product-2.jpg';
 
 
 // Modal state for address form
@@ -216,7 +218,7 @@ const cartItems = ref([
     id: 1,
     name: 'Product Name',
     category: 'Category',
-    image: '/assets/images/products/product-1.jpg',
+    image: Product1,
     quantity: 1,
     price: 1800,
     originalPrice: 2000,
@@ -225,7 +227,7 @@ const cartItems = ref([
     id: 2,
     name: 'Product Name 2',
     category: 'Category',
-    image: '/assets/images/products/product-2.jpg',
+    image: Product2,
     quantity: 1,
     price: 2500,
     originalPrice: 3000,

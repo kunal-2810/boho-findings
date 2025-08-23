@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <section class="flex flex-col items-center justify-center py-8">
-      <h1 class="text-2xl font-medium mb-2">Orders ID</h1>
       <nav class="text-sm">
         <ol class="flex space-x-2">
           <li>
@@ -10,13 +9,7 @@
           <li>
             <span>/</span>
           </li>
-          <li>
-            <a href="#" class="text-orange hover:underline">My-Account</a>
-          </li>
-          <li>
-            <span>/</span>
-          </li>
-          <li>Profile</li>
+          <li>My Account</li>
         </ol>
       </nav>
     </section>
@@ -27,7 +20,7 @@
           <button
             class="w-full text-left px-6 py-4 md:px-0 md:py-4 text-base font-medium hover:text-orange focus:text-orange transition border-b md:border-b-0 md:border-l-4 md:border-l-transparent md:hover:border-l-orange md:focus:border-l-orange"
             :class="activeTab === item.key ? 'text-orange md:border-l-orange' : 'text-gray-700'"
-            @click="activeTab = item.key"
+            @click="onMenuClick(item)"
           >
             {{ item.label }}
           </button>
@@ -43,7 +36,7 @@
           <form class="space-y-4 max-w-lg">
             <div class="flex items-center gap-6 mb-4">
               <div class="relative w-20 h-20">
-                <img :src="profileImage || '/assets/images/profile/profile-1.jpg'" class="w-20 h-20 object-cover rounded-full border" />
+                <img :src="profileImage || defaultProfileImage" class="w-20 h-20 object-cover rounded-full border" />
                 <label class="absolute bottom-0 right-0 bg-green text-white rounded-full p-1 cursor-pointer shadow" title="Upload">
                   <input type="file" class="hidden" @change="onProfileImageChange" />
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
@@ -214,10 +207,25 @@ const menuItems = [
   { key: 'profile', label: 'Profile' },
   { key: 'addresses', label: 'Addresses' },
   { key: 'password', label: 'Password' },
+  { key: 'orders', label: 'Orders', link: `${BASE_PATH}/orders` },
 ];
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
 const activeTab = ref('profile');
 
+function onMenuClick(item: any) {
+  if (item.key === 'orders') {
+    router.push({ name: 'MyOrders' });
+  } else {
+    activeTab.value = item.key;
+  }
+}
+
 // Profile form state
+import defaultProfileImage from '@/assets/images/profile/profile-1.jpg';
+import { BASE_PATH } from '../utilities/constant';
+
 const profileForm = ref({
   name: 'John Doe',
   gender: '',

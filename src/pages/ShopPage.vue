@@ -20,12 +20,12 @@
       <!-- Mobile/Tablet: Centered Filter & Sort Buttons (show up to lg) -->
       <div class="flex justify-center gap-4 lg:hidden">
         <button @click="showFilterDrawer = true" class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2 font-medium border border-gray-300">
-          <img src="/assets/icons/filter.svg" alt="Filter" class="w-5 h-5" />
+          <img src="@/assets/icons/filter.svg" alt="Filter" class="w-5 h-5" />
           Filter
         </button>
         <div class="relative">
           <button @click="toggleSortDropdown" class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2 font-medium border border-gray-300">
-            <img src="/assets/icons/sort.svg" alt="Sort" class="w-5 h-5" />
+            <img src="@/assets/icons/sort.svg" alt="Sort" class="w-5 h-5" />
             Sort By
             <svg :class="{'rotate-180': sortDropdownOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -50,7 +50,7 @@
           <a
             v-for="product in visibleProducts"
             :key="product.id"
-            :href="`/product/${product.id}`"
+            :href="`${BASE_PATH}/product/${product.id}`"
             class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col"
           >
             <div class="relative">
@@ -61,7 +61,7 @@
                 aria-label="Add to Wishlist"
               >
                 <img
-                  :src="product.wishlisted ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+                  :src="product.wishlisted ? '@/assets/icons/wishlist.svg' : '@/assets/icons/wishlist-border.svg'"
                   :alt="product.wishlisted ? 'Added to Wishlist' : 'Add to Wishlist'"
                   class="w-5 h-5"
                 />
@@ -108,7 +108,7 @@
                   aria-label="Add to Cart"
                 >
                   <img
-                    :src="product.addedToCart ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+                    :src="product.addedToCart ? cartFilledIcon : cartIcon"
                     :alt="product.addedToCart ? 'Added to Cart' : 'Add to Cart'"
                     class="w-5 h-5"
                   />
@@ -163,7 +163,7 @@
             <div class="text-sm text-gray-600">Showing {{ filteredProducts.length }} Products</div>
             <div class="relative">
               <button @click="toggleSortDropdown" class="bg-gray-100 px-4 py-2 rounded flex items-center gap-2 font-medium border border-gray-300">
-                <img src="/assets/icons/sort.svg" alt="Sort" class="w-5 h-5" />
+                <img src="@/assets/icons/sort.svg" alt="Sort" class="w-5 h-5" />
                 Sort By
                 <svg :class="{'rotate-180': sortDropdownOpen}" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -186,7 +186,7 @@
               <a
                 v-for="product in visibleProducts"
                 :key="product.id"
-                :href="`/product/${product.id}`"
+                :href="`${BASE_PATH}/product/${product.id}`"
                 class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col"
               >
                 <div class="relative">
@@ -197,7 +197,7 @@
                     aria-label="Add to Wishlist"
                   >
                     <img
-                      :src="product.wishlisted ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+                      :src="product.wishlisted ? '@/assets/icons/wishlist.svg' : '@/assets/icons/wishlist-border.svg'"
                       :alt="product.wishlisted ? 'Added to Wishlist' : 'Add to Wishlist'"
                       class="w-5 h-5"
                     />
@@ -244,7 +244,7 @@
                       aria-label="Add to Cart"
                     >
                       <img
-                        :src="product.addedToCart ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+                        :src="product.addedToCart ? cartFilledIcon : cartIcon"
                         :alt="product.addedToCart ? 'Added to Cart' : 'Add to Cart'"
                         class="w-5 h-5"
                       />
@@ -371,7 +371,7 @@ const products = ref([
     name: 'Gold Ring',
     category: 'Rings',
     material: 'gold',
-    image: '/assets/images/products/product-1.jpg',
+  image: new URL('@/assets/images/products/product-1.jpg', import.meta.url).href,
     price: 1200,
     salesPrice: 1500,
     wishlisted: false
@@ -381,7 +381,7 @@ const products = ref([
     name: 'Silver Necklace',
     category: 'Necklaces',
     material: 'silver',
-    image: '/assets/images/products/product-2.jpg',
+  image: new URL('@/assets/images/products/product-2.jpg', import.meta.url).href,
     price: 900,
     salesPrice: null,
     wishlisted: false
@@ -391,7 +391,7 @@ const products = ref([
     name: 'Brass Bracelet',
     category: 'Bracelets',
     material: 'brass',
-    image: '/assets/images/products/product-3.jpg',
+  image: new URL('@/assets/images/products/product-3.jpg', import.meta.url).href,
     price: 700,
     salesPrice: 850,
     wishlisted: false
@@ -401,7 +401,7 @@ const products = ref([
     name: 'Gold Necklace',
     category: 'Necklaces',
     material: 'gold',
-    image: '/assets/images/products/product-4.jpg',
+  image: new URL('@/assets/images/products/product-4.jpg', import.meta.url).href,
     price: 1800,
     salesPrice: 2100,
     wishlisted: false
@@ -411,7 +411,7 @@ const products = ref([
     name: 'Silver Ring',
     category: 'Rings',
     material: 'silver',
-    image: '/assets/images/products/product-5.jpg',
+  image: new URL('@/assets/images/products/product-5.jpg', import.meta.url).href,
     price: 950,
     salesPrice: null,
     wishlisted: false
@@ -421,7 +421,7 @@ const products = ref([
     name: 'Brass Necklace',
     category: 'Necklaces',
     material: 'brass',
-    image: '/assets/images/products/product-6.jpg',
+  image: new URL('@/assets/images/products/product-6.jpg', import.meta.url).href,
     price: 800,
     salesPrice: 950,
     wishlisted: false
@@ -431,7 +431,7 @@ const products = ref([
     name: 'Gold Bracelet',
     category: 'Bracelets',
     material: 'gold',
-    image: '/assets/images/products/product-7.jpg',
+  image: new URL('@/assets/images/products/product-7.jpg', import.meta.url).href,
     price: 1300,
     salesPrice: 1500,
     wishlisted: false
@@ -441,7 +441,7 @@ const products = ref([
     name: 'Silver Bracelet',
     category: 'Bracelets',
     material: 'silver',
-    image: '/assets/images/products/product-8.jpg',
+  image: new URL('@/assets/images/products/product-8.jpg', import.meta.url).href,
     price: 750,
     salesPrice: null,
     wishlisted: false
@@ -451,7 +451,7 @@ const products = ref([
     name: 'Brass Ring',
     category: 'Rings',
     material: 'brass',
-    image: '/assets/images/products/product-9.jpg',
+  image: new URL('@/assets/images/products/product-9.jpg', import.meta.url).href,
     price: 600,
     salesPrice: 700,
     wishlisted: false
@@ -461,7 +461,7 @@ const products = ref([
     name: 'Gold Anklet',
     category: 'Bracelets',
     material: 'gold',
-    image: '/assets/images/products/product-10.jpg',
+  image: new URL('@/assets/images/products/product-10.jpg', import.meta.url).href,
     price: 1100,
     salesPrice: 1300,
     wishlisted: false
@@ -471,7 +471,7 @@ const products = ref([
     name: 'Silver Anklet',
     category: 'Bracelets',
     material: 'silver',
-    image: '/assets/images/products/product-11.jpg',
+    image: new URL('@/assets/images/products/product-11.jpg', import.meta.url).href,
     price: 850,
     salesPrice: null,
     wishlisted: false
@@ -481,7 +481,7 @@ const products = ref([
     name: 'Brass Anklet',
     category: 'Bracelets',
     material: 'brass',
-    image: '/assets/images/products/product-12.jpg',
+    image: new URL('@/assets/images/products/product-12.jpg', import.meta.url).href,
     price: 650,
     salesPrice: 800,
     wishlisted: false
@@ -491,7 +491,7 @@ const products = ref([
     name: 'Gold Pendant',
     category: 'Necklaces',
     material: 'gold',
-    image: '/assets/images/products/product-13.jpg',
+    image: new URL('@/assets/images/products/product-13.jpg', import.meta.url).href,
     price: 2000,
     salesPrice: 2300,
     wishlisted: false
@@ -501,7 +501,7 @@ const products = ref([
     name: 'Silver Pendant',
     category: 'Necklaces',
     material: 'silver',
-    image: '/assets/images/products/product-14.jpg',
+    image: new URL('@/assets/images/products/product-14.jpg', import.meta.url).href,
     price: 1200,
     salesPrice: null,
     wishlisted: false
@@ -511,7 +511,7 @@ const products = ref([
     name: 'Brass Pendant',
     category: 'Necklaces',
     material: 'brass',
-    image: '/assets/images/products/product-15.jpg',
+    image: new URL('@/assets/images/products/product-15.jpg', import.meta.url).href,
     price: 900,
     salesPrice: 1050,
     wishlisted: false
@@ -565,6 +565,10 @@ const visibleProducts = computed(() => sortProducts(filteredProducts.value));
 
 
 // Add to cart toggle logic
+import cartFilledIcon from '@/assets/icons/cart-filled.svg';
+import cartIcon from '@/assets/icons/cart.svg';
+import { BASE_PATH } from '../utilities/constant';
+
 function addToCart(product: any) {
   product.addedToCart = !product.addedToCart;
   if (product.addedToCart) {

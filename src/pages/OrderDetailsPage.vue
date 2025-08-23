@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <section class="flex flex-col items-center justify-center py-8">
-      <h1 class="text-2xl font-medium mb-2">Orders ID</h1>
       <nav class="text-sm">
         <ol class="flex space-x-2">
           <li>
@@ -82,7 +81,7 @@
         <div class="divide-y divide-gray-200">
           <!-- Product Item -->
           <div class="flex py-4">
-            <img src="/assets/images/products/product-1.jpg" alt="Product" class="w-28 h-28 object-cover rounded mr-6" />
+            <img :src="product1Img" alt="Product" class="w-28 h-28 object-cover rounded mr-6" />
             <div class="flex-1">
               <div class="font-medium text-base">Boho Necklace</div>
               <div class="text-gray-500 text-sm mb-1">Category: Jewelry</div>
@@ -92,7 +91,7 @@
           </div>
           <!-- Product Item -->
           <div class="flex py-4">
-            <img src="/assets/images/products/product-2.jpg" alt="Product" class="w-28 h-28 object-cover rounded mr-6" />
+            <img :src="product2Img" alt="Product" class="w-28 h-28 object-cover rounded mr-6" />
             <div class="flex-1">
               <div class="font-medium text-base">Boho Bracelet</div>
               <div class="text-gray-500 text-sm mb-1">Category: Jewelry</div>
@@ -115,6 +114,8 @@
 </template>
 
 <script setup lang="ts">
+const product1Img = new URL('@/assets/images/products/product-1.jpg', import.meta.url).href;
+const product2Img = new URL('@/assets/images/products/product-2.jpg', import.meta.url).href;
 
 import Layout from '../components/layout/Layout.vue';
 

@@ -209,17 +209,17 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? wishlistIcon : wishlistBorderIcon"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"
@@ -249,7 +249,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -404,17 +404,17 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? wishlistIcon : wishlistBorderIcon"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"
@@ -444,7 +444,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -536,17 +536,17 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? wishlistIcon : wishlistBorderIcon"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"
@@ -576,7 +576,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -668,17 +668,17 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? wishlistIcon : wishlistBorderIcon"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"
@@ -708,7 +708,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -800,17 +800,17 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? wishlistIcon : wishlistBorderIcon"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"
@@ -840,7 +840,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -932,17 +932,17 @@
           <div class="bg-white rounded-lg shadow hover:shadow-lg transition group h-full flex flex-col">
           <div class="relative">
             <!-- Wishlist Button -->
-            <button
+            <!-- <button
             class="absolute top-2 right-2 z-20 bg-white rounded-full p-1 shadow transition"
             @click.prevent.stop="toggleWishlistIcon(product)"
             aria-label="Add to Wishlist"
             >
             <img
-              :src="wishlistIconState[product.id] ? '/assets/icons/wishlist.svg' : '/assets/icons/wishlist-border.svg'"
+              :src="wishlistIconState[product.id] ? wishlistIcon : wishlistBorderIcon"
               :alt="wishlistIconState[product.id] ? 'Added to Wishlist' : 'Add to Wishlist'"
               class="w-5 h-5"
             />
-            </button>
+            </button> -->
             <!-- Product Image -->
             <img
             :src="product.image"
@@ -972,7 +972,7 @@
               aria-label="Add to Cart"
             >
               <img
-              :src="cartIconState[product.id] ? '/assets/icons/cart-filled.svg' : '/assets/icons/cart.svg'"
+              :src="cartIconState[product.id] ? cartFilledIcon : cartIcon"
               :alt="cartIconState[product.id] ? 'Added to Cart' : 'Add to Cart'"
               class="w-5 h-5"
               />
@@ -1059,13 +1059,20 @@
 import { ref, computed, onMounted } from 'vue';
 import Layout from '../components/layout/Layout.vue';
 
+import desktopBanner1 from '@/assets/images/banners/banner-1.jpg';
+import desktopBanner2 from '@/assets/images/banners/banner-2.jpg';
+
 const desktopBanners = [
-  '/assets/images/banners/banner-1.jpg',
-  '/assets/images/banners/banner-2.jpg'
+  desktopBanner1,
+  desktopBanner2
 ];
+
+import mobileBanner1 from '@/assets/images/banners/mobile-banner-1.jpg';
+import mobileBanner2 from '@/assets/images/banners/mobile-banner-2.jpg';
+
 const mobileBanners = [
-  '/assets/images/banners/mobile-banner-1.jpg',
-  '/assets/images/banners/mobile-banner-2.jpg'
+  mobileBanner1,
+  mobileBanner2
 ];
 
 const currentBanner = ref(0);
@@ -1079,12 +1086,21 @@ function nextBanner() {
 }
 
 // Product slider logic
+import product1 from '@/assets/images/products/product-1.jpg';
+import product2 from '@/assets/images/products/product-2.jpg';
+import product3 from '@/assets/images/products/product-3.jpg';
+import product4 from '@/assets/images/products/product-4.jpg';
+import product5 from '@/assets/images/products/product-5.jpg';
+import product6 from '@/assets/images/products/product-6.jpg';
+import product7 from '@/assets/images/products/product-7.jpg';
+import product8 from '@/assets/images/products/product-8.jpg';
+
 const products = ref([
   {
     id: 1,
     name: 'Hand-painted Vase',
     category: 'Pottery',
-    image: '/assets/images/products/product-1.jpg',
+    image: product1,
     alt: 'Hand-painted Vase',
     salesPrice: 1200,
     price: 950,
@@ -1093,7 +1109,7 @@ const products = ref([
     id: 2,
     name: 'Abstract Canvas',
     category: 'Paintings',
-    image: '/assets/images/products/product-2.jpg',
+    image: product2,
     alt: 'Abstract Canvas',
     salesPrice: 2000,
     price: 1700,
@@ -1102,7 +1118,7 @@ const products = ref([
     id: 3,
     name: 'Silver Necklace',
     category: 'Jewelry',
-    image: '/assets/images/products/product-3.jpg',
+    image: product3,
     alt: 'Silver Necklace',
     salesPrice: 1500,
     price: 1200,
@@ -1111,7 +1127,7 @@ const products = ref([
     id: 4,
     name: 'Clay Sculpture',
     category: 'Sculptures',
-    image: '/assets/images/products/product-4.jpg',
+    image: product4,
     alt: 'Clay Sculpture',
     salesPrice: 1800,
     price: 1450,
@@ -1120,7 +1136,7 @@ const products = ref([
     id: 5,
     name: 'Woven Textile',
     category: 'Textiles',
-    image: '/assets/images/products/product-5.jpg',
+    image: product5,
     alt: 'Woven Textile',
     salesPrice: 900,
     price: 700,
@@ -1129,7 +1145,7 @@ const products = ref([
     id: 6,
     name: 'Decorative Plate',
     category: 'Home Decor',
-    image: '/assets/images/products/product-6.jpg',
+    image: product6,
     alt: 'Decorative Plate',
     salesPrice: 1100,
     price: 850,
@@ -1138,7 +1154,7 @@ const products = ref([
     id: 7,
     name: 'Artistic Notebook',
     category: 'Stationery',
-    image: '/assets/images/products/product-7.jpg',
+    image: product7,
     alt: 'Artistic Notebook',
     salesPrice: 500,
     price: 350,
@@ -1147,7 +1163,7 @@ const products = ref([
     id: 8,
     name: 'Leather Wallet',
     category: 'Accessories',
-    image: '/assets/images/products/product-8.jpg',
+    image: product8,
     alt: 'Leather Wallet',
     salesPrice: 800,
     price: 650,
@@ -1202,16 +1218,22 @@ function nextProduct() {
 const cartIconState = ref<{ [key: number]: boolean }>({});
 
 // State to track wishlist icon for each product
-const wishlistIconState = ref<{ [key: number]: boolean }>({});
+// import wishlistIcon from '@/assets/icons/wishlist.svg';
+// import wishlistBorderIcon from '@/assets/icons/wishlist-border.svg';
+
+// const wishlistIconState = ref<{ [key: number]: boolean }>({});
 
 // Toggle cart icon state for a product
+import cartFilledIcon from '@/assets/icons/cart-filled.svg';
+import cartIcon from '@/assets/icons/cart.svg';
+
 function toggleCartIcon(product: any) {
   cartIconState.value[product.id] = !cartIconState.value[product.id];
 }
 
 // Toggle wishlist icon state for a product
-function toggleWishlistIcon(product: any) {
-  wishlistIconState.value[product.id] = !wishlistIconState.value[product.id];
-}
+// function toggleWishlistIcon(product: any) {
+//   wishlistIconState.value[product.id] = !wishlistIconState.value[product.id];
+// }
 
 </script>
