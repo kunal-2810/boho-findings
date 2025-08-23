@@ -25,19 +25,9 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import('./pages/CartPage.vue'),
 	},
 	{
-		path: '/wishlist',
-		name: 'Wishlist',
-		component: () => import('./pages/WishlistPage.vue'),
-	},
-	{
 		path: '/my-account',
 		name: 'MyAccount',
 		component: () => import('./pages/MyAccountPage.vue'),
-	},
-	{
-		path: '/checkout',
-		name: 'Checkout',
-		component: () => import('./pages/CheckoutPage.vue'),
 	},
 	{
 		path: '/orders',

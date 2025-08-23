@@ -188,7 +188,7 @@
             <span>Total</span>
             <span class="font-primary">₹4,301</span>
           </div>
-          <button class="w-full flex items-center justify-between bg-white border border-gray-300 text-sm px-4 py-2 rounded mb-3 hover:bg-orange hover:text-white transition">
+          <button class="w-full flex items-center justify-between bg-white border border-gray-300 text-sm px-4 py-2 rounded mb-3 hover:bg-orange transition">
             Apply Coupon
             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
