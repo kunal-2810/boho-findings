@@ -55,7 +55,7 @@
                     >
                         <ul>
                             <li v-for="col in collections" :key="col.id" class="relative group">
-                                <a :href="col.link" class="block px-4 py-2 font-base hover-bg-beige flex justify-between items-center">
+                                <a :href="col.link" class="px-4 py-2 font-base hover-bg-beige flex justify-between items-center">
                                     {{ col.name }}
                                     <span v-if="col.subCategories && col.subCategories.length" class="ml-2">
                                         <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
